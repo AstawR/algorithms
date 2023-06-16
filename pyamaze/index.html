@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://AstawR.github.io/my-docs/stack/">
+        <link rel="canonical" href="https://AstawR.github.io/my-docs/pyamaze/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Stack - Rama Astawa</title>
+        <title>PYAMAZE - Rama Astawa</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -45,8 +45,8 @@
                             <li class="navitem">
                                 <a href="../linked%20lists/" class="nav-link">Linked Lists</a>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Stack</a>
+                            <li class="navitem">
+                                <a href="../stack/" class="nav-link">Stack</a>
                             </li>
                             <li class="navitem">
                                 <a href="../queues/" class="nav-link">Queues</a>
@@ -63,8 +63,8 @@
                             <li class="navitem">
                                 <a href="../hash%20tables/" class="nav-link">Hash Tables</a>
                             </li>
-                            <li class="navitem">
-                                <a href="../pyamaze/" class="nav-link">PYAMAZE</a>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">PYAMAZE</a>
                             </li>
                         </ul>
 
@@ -75,12 +75,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../linked%20lists/" class="nav-link">
+                                <a rel="prev" href="../hash%20tables/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../queues/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -102,14 +102,14 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#stack" class="nav-link">Stack</a>
+            <li class="nav-item" data-level="1"><a href="#pyamaze" class="nav-link">Pyamaze</a>
               <ul class="nav flex-column">
               </ul>
             </li>
             
             <li class="nav-item" data-level="1"><a href="#_1" class="nav-link"></a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#definition" class="nav-link">Definition</a>
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -118,7 +118,7 @@
             
             <li class="nav-item" data-level="1"><a href="#_2" class="nav-link"></a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#example" class="nav-link">Example</a>
+            <li class="nav-item" data-level="2"><a href="#mapping" class="nav-link">Mapping</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -127,6 +127,24 @@
             
             <li class="nav-item" data-level="1"><a href="#_3" class="nav-link"></a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#traversal" class="nav-link">Traversal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_4" class="nav-link"></a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#usage" class="nav-link">Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_5" class="nav-link"></a>
+              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -134,54 +152,197 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="stack">Stack</h1>
+<h1 id="pyamaze">Pyamaze</h1>
 <hr />
 <h1 id="_1"></h1>
-<h2 id="definition">Definition</h2>
+<h2 id="introduction">Introduction</h2>
 <p>__</p>
-<p>A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle,
-where a new element added to the top of the stack is the first to be removed.</p>
-<p>Basic operations/methods when using a stack:</p>
+<p>You are to create a left-hand wall following algorithm to map the maze and save it as a data structure and then use the mapping you have done to traverse the maze.
+This involves the robot to only follow the left wall until it has visited all cells and return an array.</p>
 <ul>
-<li><code>push(item)</code> - inserts an item at the top of the stack.</li>
-<li><code>pop()</code> - removes the topmost element from the stack.</li>
-<li><code>is_empty()</code> - verifies the length of the list, returns true if stack is empty.</li>
-<li><code>size()</code> - returns the number of elements in the stack by its length.</li>
+<li>The array can be a dictionary, 2d array of lists or a combination of both.</li>
+<li>Once you have created the data structure, create an algorithm to traverse it from the bottom right-hand corner to the top left which is the goal.</li>
+<li>Save your map structure as a .csv and reload to traverse.</li>
+<li>Once your algorithm has successfully traversed your saved map, test your mapping and traversing on a 20x20 generated map.</li>
+<li>Use the tracePath() method and take a screenshot of your successful mapping and traversing.</li>
 </ul>
 <h1 id="_2"></h1>
 <hr />
-<h2 id="example">Example</h2>
+<h2 id="mapping">Mapping</h2>
 <p>__</p>
 <h1 id="_3"></h1>
-<p>Implementation:</p>
-<pre><code>class Stack:
-    def __init(self):
-        self.stack = []
+<p>Following The Left Wall To The Goal:
+<img alt="Image" src="../images/tracepath%20A.png" /></p>
+<pre><code>from pyamaze import maze, agent
+import time
 
-    def push(self, item):
-        self.stack.append(item)
+def RCW():
+    global direction
+    k=list(direction.keys())
+    v=list(direction.values())
+    v_rotated=[v[-1]]+v[:-1]
+    direction=dict(zip(k,v_rotated))
 
-    def pop(self):
-        if not self.is_empty():
-            return self.stack.pop()
+def RCCW():
+    global direction
+    k=list(direction.keys())
+    v=list(direction.values())
+    v_rotated=v[1:]+[v[0]]
+    direction=dict(zip(k,v_rotated))
 
-    def is_empty(self):
-        return len(self.stack) == 0
+def moveForward(cell):
+    if direction['forward']=='E':
+        return (cell[0],cell[1]+1), 'E'
+    if direction['forward']=='W':
+        return (cell[0],cell[1]-1), 'W'
+    if direction['forward']=='N':
+        return (cell[0]-1,cell[1]), 'N'
+    if direction['forward']=='S':
+        return (cell[0]+1,cell[1]), 'S'
 
-    def size(self):
-        return len(self.stack)
+def wallFollower(myMaze):
+    global direction, end
+    direction={'forward': 'N', 'left': 'W', 'back': 'S', 'right': 'E'}
+    currCell=(myMaze.rows,myMaze.cols)
+    path=''
+    dict_path = {}
+    dict_count = 0
+    end = False
+
+    while True:
+        if currCell == (1, 1): #ends path before putting goal
+            dict_count += 1
+            dict_path.update({dict_count: currCell})
+            currCell, d = moveForward(currCell)
+            path += d
+            break
+        if myMaze.maze_map[currCell][direction['left']]==0:
+            if myMaze.maze_map[currCell][direction['forward']]==0:
+                RCW()
+            else:
+                dict_count += 1
+                dict_path.update({dict_count: currCell})
+                currCell,d=moveForward(currCell)
+                path+=d
+        else:
+            RCCW()
+            dict_count += 1
+            dict_path.update({dict_count: currCell})
+            currCell,d=moveForward(currCell)
+            path+=d
+    return path, dict_path
 </code></pre>
-<p>Usage:</p>
-<pre><code>stack = Stack()
-stack.push(10)
-stack.push(20)
-stack.push(30)
+<p>Tracing The Rest Of The Maze:
+<img alt="Image" src="../images/tracepath%20B.png" /></p>
+<pre><code>def wallFollowerSearch(myMaze):
+    global direction
+    direction={'forward': 'N', 'left': 'W', 'back': 'S', 'right': 'E'}
+    currCell=(1, 1)
+    path0=''
+    dict_path2 = {}
+    dict_count = 0
 
-print(stack.size())         # prints 3.
-item = stack.pop()
-print(item)                 # prints 30.
+    while True:
+        if currCell == (myMaze.rows, myMaze.cols) and direction['forward'] == path[0]:
+            break
+        if myMaze.maze_map[currCell][direction['left']]==0:
+            if myMaze.maze_map[currCell][direction['forward']]==0:
+                RCW()
+            else:
+                currCell,d=moveForward(currCell)
+                path0+=d
+                dict_count += 1
+                dict_path2.update({dict_count: currCell})
+        else:
+            RCCW()
+            currCell,d=moveForward(currCell)
+            path0+=d
+            dict_count += 1
+            dict_path2.update({dict_count: currCell})
+    pathsearch=path0[1:]
+    return pathsearch, dict_path2
+</code></pre>
+<hr />
+<h2 id="traversal">Traversal</h2>
+<p>__</p>
+<h1 id="_4"></h1>
+<p>Following the fastest path to the goal:
+<img alt="Image" src="../images/tracepath%20C.png" /></p>
+<pre><code>def remove_dead_ends(maze):
+    unique_cells = []
+    reversed_maze = list(maze.values())[::-1]
 
-print(stack.is_empty())     # prints False.
+    for cell in reversed_maze:
+        if cell not in unique_cells:
+            unique_cells.append(cell)
+        elif cell in unique_cells:
+            unique_cells = unique_cells[:unique_cells.index(cell) + 1]
+    new_maze = {key: value for key, value in maze.items() if value in unique_cells}
+    return new_maze
+
+pathgoal=path
+while'EW' in pathgoal or 'WE' in pathgoal or 'NS' in pathgoal or 'SN' in pathgoal:
+    pathgoal=pathgoal.replace('EW','')
+    print(pathgoal, " EW")
+    pathgoal=pathgoal.replace('WE', '')
+    print(pathgoal, " WE")
+    pathgoal=pathgoal.replace('NS', '')
+    print(pathgoal, " NS")
+    pathgoal=pathgoal.replace('SN', '')
+    print(pathgoal, " SN")
+</code></pre>
+<hr />
+<h2 id="usage">Usage</h2>
+<p>__</p>
+<h1 id="_5"></h1>
+<p>20x20 Maze:
+<img alt="Image" src="../images/usage%20example.png" /></p>
+<pre><code>if __name__=='__main__':
+    start_time = time.time()
+    myMaze=maze()
+    myMaze.CreateMaze()
+
+    path,dict_path = wallFollower(myMaze)
+    pathsearch, dict_path2 = wallFollowerSearch(myMaze)
+
+    a = agent(myMaze, shape='arrow', footprints=True)
+    if path[len(path)-2] == 'N':
+        b = agent(myMaze, 2, 1, shape='arrow', footprints=True)
+    else:
+        b = agent(myMaze, 1, 2, shape='arrow', footprints=True)
+    c = agent(myMaze, footprints=True, filled=True)
+
+
+    new_maze = remove_dead_ends(dict_path)
+
+    new_dict = {}
+    seen_values = set()
+    for key, value in new_maze.items():
+        if value not in seen_values:
+            new_dict[key] = value
+            seen_values.add(value)
+
+    dict_pathfinal = {}
+    for i, key in enumerate(dict_path.keys()):
+        dict_pathfinal[i + 1] = dict_path[key]
+    start_index = len(dict_path)
+    for i, key in enumerate(dict_path2.keys()):
+        dict_pathfinal[start_index + i + 1] = dict_path2[key]
+
+    myMaze.tracePath({a: path})
+    myMaze.tracePath({b: pathsearch})
+    myMaze.tracePath({c: pathgoal})
+
+    print(myMaze.maze_map)
+    print("Mapping Path: ", pathsearch)
+    print("Mapping Array: ", dict_pathfinal)
+    print("Traversal Path: ", pathgoal)
+    print("Traversal Array: ", new_dict)
+
+    myMaze.run()
+    end_time = time.time()
+    execution_time = end_time - start_time
+    print("Execution time: ", execution_time, " seconds")
 </code></pre>
 <hr /></div>
             </div>

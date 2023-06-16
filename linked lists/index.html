@@ -63,6 +63,9 @@
                             <li class="navitem">
                                 <a href="../hash%20tables/" class="nav-link">Hash Tables</a>
                             </li>
+                            <li class="navitem">
+                                <a href="../pyamaze/" class="nav-link">PYAMAZE</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
@@ -98,12 +101,91 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#linked-lists" class="nav-link">Linked Lists</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link"></a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#definition" class="nav-link">Definition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_2" class="nav-link"></a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#example" class="nav-link">Example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="linked-lists">Linked Lists</h1>
+<hr />
+<h1 id="_1"></h1>
+<h2 id="definition">Definition</h2>
+<p>__</p>
+<p>A linked list is a linear data structure involving a sequence of what are called 'nodes',
+each node contains a stored value and a reference to the next node in the sequence.</p>
+<p>Linked lists are more efficient than lists or arrays when it comes to the insertion and deletion of elements
+as they don't require reorganisation.</p>
+<h1 id="_2"></h1>
+<hr />
+<h2 id="example">Example</h2>
+<p>__</p>
+<h1 id="_3"></h1>
+<p>Implementation:</p>
+<pre><code>class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            current.next = new_node
+
+    def display(self):
+        elements = []
+        current = self.head
+        while current is not None:
+            elements.append(current.value)
+            current = current.next
+        print(elements)
+</code></pre>
+<p>Usage:</p>
+<pre><code>my_list = LinkedList()          # Creates a linked list instance.
+
+my_list.append(10)              # Append elements to the linked list.
+my_list.append(20)
+my_list.append(30)
+my_list.append(40)
+
+my_list.display()               # Output: [10, 20, 30, 40].
+</code></pre>
+<hr /></div>
             </div>
         </div>
 

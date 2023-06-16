@@ -63,6 +63,9 @@
                             <li class="navitem">
                                 <a href="../hash%20tables/" class="nav-link">Hash Tables</a>
                             </li>
+                            <li class="navitem">
+                                <a href="../pyamaze/" class="nav-link">PYAMAZE</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
@@ -98,12 +101,71 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#arrays" class="nav-link">Arrays</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link"></a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#definition" class="nav-link">Definition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_2" class="nav-link"></a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#built-in-methods" class="nav-link">Built-in Methods</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="arrays">Arrays</h1>
+<hr />
+<h1 id="_1"></h1>
+<h2 id="definition">Definition</h2>
+<p>__</p>
+<p>An array is a container that allows you to store multiple values in a single variable. Each value is referred to as an 'element' and can be called
+when needed by either value or index. </p>
+<p>The difference between arrays and lists is that arrays are restricted to a fixed size at the time of declaration, 
+they can also only store elements of a single data type, whether that be floating-point numbers, characters, etc.</p>
+<p>Although lists are the preferred data structure for Python, there are a several built-in methods for arrays in C#.</p>
+<h1 id="_2"></h1>
+<hr />
+<h2 id="built-in-methods">Built-in Methods</h2>
+<p>__</p>
+<h1 id="_3"></h1>
+<p>Length:</p>
+<pre><code>int[] numbers = {1, 2, 3, 4, 5};    
+int length = numbers.Length;                # length = 5.
+</code></pre>
+<p>GetValue(int index):</p>
+<pre><code>int[] numbers = {1, 2, 3, 4, 5};
+int value = (int)numbers.GetValue(2);       # value = 3.
+</code></pre>
+<p>SetValue(object value, int index):</p>
+<pre><code>int[] numbers = {1, 2, 3, 4, 5};
+numbers.SetValue(10, 1);                    # numbers = {1, 10, 3, 4, 5}.
+</code></pre>
+<p>Array.Sort(Array array):</p>
+<pre><code>int[] numbers = {5, 3, 1, 4, 2};
+Array.Sort(numbers);                        # numbers = {1, 2, 3, 4, 5}.
+</code></pre>
+<hr /></div>
             </div>
         </div>
 
